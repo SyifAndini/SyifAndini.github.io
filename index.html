@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="container">
+        <div class="nav-wrapper">
+            <!-- Navbar logo -->
+            <div class="logo">
+                <img id="logo" src="/assets/logo-king.png" width="90" height="auto">
+            </div>
+        <!-- Navbar Links -->
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article id="home">
+        <h1>Hello, <span id="name"></span>!<br> Welcome to King's Website!</h1>
+    </article>
+
+    <article id="profile">
+        <h1>Our Headquarter</h1>
+        <div id="hq">
+        <img id="jakarta" src="/assets/jakarta.jpeg" alt="Jakarta">
+        <img id="depok" src="/assets/jakarta.jpeg" alt="Depok">
+        <img id="Bogor" src="/assets/jakarta.jpeg" alt="Bogor">
+        </div>
+    </article>
+
+    <h1>Message Us!</h1>
+    <article id="message">
+        <form name="message-form" onsubmit="return validateForm()">
+            <label for="nama">Nama : </label>
+            <input type="text" name="nama" placeholder="Nama"><br><br>
+            <label for="tgl_lahir">Tanggal lahir : </label>
+            <input type="date" name="tgl_lahir"><br><br>
+            <label for="jenkel">Jenis Kelamin : </label>
+            <input type="radio" id="laki" value="Laki-laki" name="jenkel">
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" value="Perempuan" name="jenkel">
+            <label for="perempuan">Perempuan</label>
+            <br><br>
+            <label for="pesan">Pesan : </label>
+            <textarea name="pesan" rows="4" cols="45"></textarea><br><br>
+            <input type="submit" value="Submit" id="btn_submit">
+        </form>
+        <div class="msgresult">
+            <p>Nama : <span id="sender-fullname"></span></p>
+            <p>Tanggal lahir : <span id="sender-birthdate"></span></p>
+            <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+            <p>Pesan : <span id="sender-messages"></span></p>
+        </div>
+    </article>
+
+    <footer>
+        <p>Created by Syifa Putri Andini 2024</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
